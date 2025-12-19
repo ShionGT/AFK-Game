@@ -65,18 +65,23 @@ class Action {
         this.colMax = colMax;
     }
 
+    // set initial current position
     #currentCol = this.colStart;
     #currentRow = this.rowIndex;
 
+    // TODO: implement method to move to next frame in action, finish condtion satements
     next() {
         // Implementation for moving to next frame in action
-        if (this.currentCol == this.colEnd && this.#currentRow < this.rowEnd) {
+        if (this.#currentCol == this.colEnd && this.#currentRow < this.rowEnd) {
             this.#currentRow++;
         }
         else if (this.#currentCol < this.colEnd && this.#currentRow < this.rowMax) {
             this.#currentRow++;
-        } else {
-            this.#currentRow = this.rowStart;
+        }else if (this.rowMax <= this.#currentRow && this.#currentCol < this.colEnd) {
+            this.#currentCol++;
+            this.#currentRow = 0;
+        } else if (this.#currentCol < this.colMax && (this.#currentRow == this.rowEnd || this.#currentRow >= this.rowMax)) {
+            this.#currentCol = this.colStart;
         }
     }
 
