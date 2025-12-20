@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>オリジナル作品</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1>Welcome to the Original File</h1>
-    <p>This is the original HTML file located in the 09_original directory.</p>
+    <main>
+        <h1>Welcome to the Original File</h1>
+        <p>This is the original HTML file located in the 09_original directory.</p>
+        <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </main>
 
-    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
-        Your browser does not support the HTML5 canvas tag.
-    </canvas>
 
 
-    <script src="js/script.js"></script>
+    <script type="module" src="./js/game.js"></script>
 </body>
+
 </html>
